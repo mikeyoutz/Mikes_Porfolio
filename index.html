@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>::Page Title::</title>
+
+<!-- MAP: I grabbed all of this code from W3Schools. DOWN-->
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(40.018074,-105.230598),
+    zoom:13,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<!-- MAP: I grabbed all of this code from W3Schools. UP-->
+
+
+<!-- CSS in the Head Below -->
+	<style type="text/css">
+
+	* { /* this red asterisk is a way of wholesale specifying attributes for all elements on the page*/
+		margin: 0;
+		padding: 0;
+		border: 0;
+		}
+
+
+/*.photo-story:nth-child(3) {
+  border: 1px solid red;
+}*/
+
+/*nth in the above specifies that something is as yet undefined. Then we say (3) and then we know it is the third one.*/
+
+	body {
+		font-family: arial;
+		margin: 0;
+		}
+
+	h4 {
+		font-weight: bold;
+		font-size: 1.05em;
+		line-height: .8em;
+		display: inline;
+	}
+
+	h2 {
+		font-weight: bolder;
+		font-size: 36px;
+		line-height: 2.7em;
+	}
+
+	.main-container {
+		/*background-color: blue;*/
+		width: 100%;
+		/*height: 100vh; This was intended, Ben said, to make the div fill out the entire available screen height*/
+		/*height: 100%;*/
+	} 
+
+	.col-main {
+		width: 940px;
+		margin: 0 auto;
+	    position: relative;
+/* Something is wrong with this--I shouldn't have to do this... or should I ? MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+	    /*background-color: blue;*/
+	} 
+
+	/*.col {
+		width: 940px;
+		margin: 0 auto;
+	    position: relative;
+	}*/
+
+	.hero-image {
+	    background-image: url(http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/header_background.jpg); /* I could have inserted the top, left and no-repeat inside of the image--it would have gone right after the g in jpg--each attribute separated by spaces only*/
+	    /*background-size: cover;*/
+	   	background-repeat: no-repeat;
+	   	/*background-position: top;*/
+	  	/*background-position: bottom;*/
+		background-position: center;
+		/*background-color: rgba(36, 36, 74, 1);*/
+	    /*width: 100%;*/
+	    width: 1180px;
+	    height: 624px;
+	    margin: 0 auto;
+	    position: relative;
+	    /*margin-bottom: 40px;*/
+	    margin-bottom: 30px;
+	} 
+
+	.nav {
+		height: 120px;
+		width: 900px;
+		background-image: url(http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/logo.png);
+		background-repeat: no-repeat;
+		/*background-color: green;*/
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		margin-left: 105px;
+		top: 70px;
+	}
+
+	.nav-links-container {
+		float: right;
+		margin: 0;
+		width: 450px;
+	}
+
+	.nav-links-container ul li {
+		display: block; /*This got rid of bullets -->
+		/*color: red; this can really only effect the bullet color because the rest of the elements are links and their color is controlled in a different way. -->
+		text-decoration: none; <!-- made list side-by-side instead of stacked -->
+		/*display: inline;*/
+		/*text-align: center;*/
+		list-style-type: none;
+		float: right;
+	}
+
+	.nav-links-container a:link, a:visited {
+	    font-weight: bold;
+	    color: #FFFFFF;
+	    text-align: right;
+	    margin-left: 20px;
+	    text-decoration: none;
+	    list-style: none;
+	    width: 100px;
+	    font-size: 12px;
+	    line-height: 3em;
+	}
+
+	.nav-links-container a:hover, 
+	.nav-links-container a:active {
+	     color: rgba(193, 193, 193, 1);
+	}
+
+	.big-text-hero {
+		font-size: 34px;
+		color: white;
+		position: relative;
+	  	line-height: 1.4em;
+	  	margin-left: 122px;
+	  	margin-top: 262px;
+	  	width: 920px;
+	  	height: 108px;
+	}
+
+	.sm-text-hero {
+		font-size: 18px;
+		color: white;
+		position: relative;
+		margin-left: 122px;
+		line-height: 1.8em
+	}
+
+
+	.e-box {
+		background-color: #25aa99;
+		width: 940px;
+		height:  50px;
+		border-radius: 5px; 
+		margin: 0 auto;
+		padding: 5px, 5px, 5px, 20px;
+		position: relative;	
+		display: block;
+		margin-bottom: 35px;
+	}
+
+	.ebox-text {
+		font-size: 17px;
+		position: relative;
+		color: white;
+		text-align: left;
+		line-height: 3em;
+		display: inline-block;
+		margin-left: 20px;
+		float: left;
+		background-color: transparent;
+	}
+
+	.e-box-button  {
+		float: right;
+		color: white;
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+	    list-style: none;
+	    top: 14px;
+	    font-size: 1.2em;
+	    font-weight: bold;
+	    margin-right: 25px;
+	}
+
+	.e-box-button a:link, a:visited, a:hover, a:active   {
+		text-decoration: none;
+	    list-style: none;
+	}
+
+
+	.clear {
+		clear: both;
+
+	}
+
+	.text {
+		width: 940px;
+		font-size: 14px;
+		margin: 0 auto;
+		position: relative;
+		line-height: 1.8em;	
+		margin-bottom: 60px;
+	}
+
+	.text p {
+  		margin-bottom: 15px;
+	}
+
+	.photo-square-row {
+	  	height: 240px;
+	  	width: 940px;
+	  	position: relative;
+	  	display: block;
+	  	margin: 0 auto;
+	  	margin-bottom: 65px;
+	}
+
+	.photo-story {
+		 width: 24.9%; /*Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		 position: relative;
+		 float: left;
+		 margin: 0 auto;
+		 display: inline-block;
+	}
+
+	.photo-square {
+		 border-radius: 5px;
+		 width: 220px;
+		 height: 144px;
+		 position: relative;
+		 margin-left: 7px;
+	}
+
+	.bump-4 {
+		margin-left: 8px;
+		margin-top: 11px;
+	}
+
+	.author {
+		line-height: 2em;
+		color: #25aa99;
+
+	}
+
+	.hours-views {
+		line-height: 1em;
+		font-size: .9em;
+		color: #b4bbc3;
+		font-weight: bold
+
+	}
+
+	.v-graph {
+		width: 940px;
+		height: 456px;
+		position: relative;
+		display: block;
+	 	margin: 0 auto;
+	 	margin-bottom: 95px;
+	}
+
+	.footer-top {
+		/*  top: 30px;Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		background-color: #25aa99;
+		width: 1180px;
+		height: 75px;
+		margin: 0 auto; 
+		position: relative; 
+		display: block;
+	}
+
+	.wrap-n-footer-top {
+		height: 50px;
+		margin: 0 auto;
+		width: 740px; /* Fix Fix Fix Fix Fix Fix Fix Fix Fix */
+		position: relative;
+		font-size: 12px;
+		line-height: 4em;
+		padding-top: 13px;
+		display: block;
+	}
+	.subscribe {
+		/*background-color: transparent; /* Testing-Testing-Testing */
+		/* top: -30px; Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		height: 50px;
+		width: 200px;
+		color: white;
+		position: relative;
+		display: inline-block;
+		text-align: right;
+		float: left;
+	}
+
+	.email-form {
+		background-color: white;
+		border-radius: 5px;
+		background-image: url(http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/subscription_email_icon.gif);
+		background-repeat: no-repeat; 
+		background-position: 5% 50%;
+		width: 280px;
+		height: 50px;
+		color: gray;
+		margin-left: 20px;
+		margin-right: 20px;
+		display: inline-block; /*Having this present in all divs allowed them exist side-by-side. Ask instructor--Is this right?*/
+		position: relative;
+		float: left;
+		padding-left: 40px;
+	}
+
+	.subscr-btn {
+		/* top: -30px; Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		background-color: #dac26c;
+		border-radius: 5px;
+		height: 50px;
+		display: inline-block;
+		width: 180px;
+		text-align: center;
+		color: white;
+		position: relative;
+		float: left;
+		text-decoration: none; 
+		/* Has to be in both of containers for there to be no underline*/
+	}
+
+	.subscr-btn  a:link, 
+	.subscr-btn a:visited {
+		text-decoration: none; /* this attribute needed to be in both the main subscr-btn container and in this a:link, a:visited container*/
+		color: white;
+	}
+
+
+	/*.subscr-btn a:hover, a:active {
+		background-color: #dac26c; */
+	/*}*/
+
+	.footer-bot { 
+		/* top: 30px;Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		background-color: #d8d9dd;
+		width: 1180px;
+		height: 288px;
+		position: relative;	
+		display: block;
+		margin: 0 auto;
+		/*bottom: 20px; /* This is pushing the bottom of the window away from the bottom of the lower div. This is allowing me to have a white bottom. It caused this div to overlap the div above. I countered that problem by adding in a top: 0; to this div*/
+		background-image: url(http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/logo.png);
+		background-repeat: no-repeat;
+		background-position : 108px 47px; /* there are only two positional elements available for background position. The first listed will always be from the left edge and the second will always be the distance from the top. Since the background is behind everything, the background image will never be affected by margin or padding, or borders--I asked Ben specifically about this whole paragraph*/
+		margin-bottom: 20px;
+	}
+
+	.footer-bot-inr-wrapr {
+		width: 714px;
+		margin: 0 auto; /* 0 auto is shorthand for typing all 4 margin values. The 0 tells the browser that top and bottom will have no margins. The auto says the that left and right margins will be automatically determined--auto will be centered 
+
+		Keep in mind that we are still free to specify additional margin value the might contridict and over-ride the 0 auto values. In basic terms, css values will be updated and over ridden by contradictory css rules that occur late ( or lower in the rule-browsers read top to bottom updating as they go).*/
+		padding-top: 47px;
+		padding-left: 130px;
+	}
+
+	
+
+	/* Below: BEN: You must put the full class name in then the li or ul, a:link, etc. Or it will only apply the styling to the first listed and then it apply the value of the second if only separated by comma's to the entire page */
+
+	/* Below: footer-bot-inr-wrapr BEN: You must also put the text decoration: none on both the ul and the li */
+	.footer-bot-inr-wrapr  a:link, 
+	.footer-bot-inr-wrapr a:visited,
+	.footer-bot-inr-wrapr  ul, 
+	.footer-bot-inr-wrapr  li { 
+		text-decoration: none;
+	    list-style: none;
+	    color: #a2a7ab;
+	    text-align: left;
+	    line-height: 2em;
+	}
+
+	.footer-bot-left-links-box {
+		float: left;
+		width: 180px;
+	}
+
+	.bold {
+		font-weight: bolder;
+		color: #818183;
+	}
+
+	.map-container {
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;
+		float: left;
+	}
+
+	.address-box {
+		width: 190px;
+		display: inline-block;
+		position: relative;
+		float: left;
+		height: 193px;
+		padding-left: 47px;
+		color: #a2a7ab;
+	}
+
+
+	.bold2 {
+		font-weight: bolder;
+		margin-bottom: 1em;
+		font-size:14px;
+		color: black;
+	}
+
+	.text2 {
+		font-size: 14px;
+	}
+
+	.email-us-btn {
+		/* top: -30px; Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+		background-color: #25aa99;
+		border-radius: 5px;
+		height: 36px;
+		display: inline-block;
+		width: 100px;
+		text-align: center;
+		color: white;
+		position: relative;
+		float: left;
+		text-decoration: none; /* Has to be in both of containers for there to be no underline*/
+		line-height: 35px;
+ 		top: 80px;
+	}
+
+
+	.email-us-btn a:link {
+		text-decoration: none;
+	    list-style: none;
+	    color: white;
+	}
+
+	.email-us-btn a:visited {
+		text-decoration: none;
+	    list-style: none;
+	    color: white;
+	}
+
+	.email-us-btn a:hover {
+		text-decoration: none;
+	    list-style: none;
+	    color: white;
+	}
+
+	.email-us-btn a:active {
+		text-decoration: none;
+	    list-style: none;
+	    color: white;
+	}
+
+	.empty-btm {
+		height: 20px;
+		position: relative;
+		display: block;
+	}
+
+	</style>
+
+</head> 
+
+<body>
+
+
+<div class="main-container">
+
+
+
+
+	<div class="hero-image">
+
+		<div class="nav">
+
+			<div class="nav-links-container">
+				<ul>
+				 	<li><a href="#Contact">CONTACT</a></li>
+				    <li><a href="#About-Us">ABOUT US</a></li>
+				    <li><a href="#Prices">PRICES</a></li>
+				    <li><a href="#Products">PRODUCTS</a></li> 
+				</ul>
+			</div>
+			
+		</div>
+
+		<div class="big-text-hero col">
+			<p>This soundted like nonsense to Alice, so she said nothing, but set off at once toward the Red Queen.<p>
+		</div>
+		
+		<div class="sm-text-hero col">
+			<p>To her surprise, she lost sight of her in a moment and found herself walking in a the front door again.</p>
+		</div>
+	</div><!-- Hero Image END -->
+
+
+
+
+	<!-- <div class="col-main"> -->
+
+
+
+		<div class="e-box">
+			<div class="ebox-text">
+				<p>This I have <span>produced</span> as a scanting of Jack's eloquence and the force of his reasoning upon such abstruse matters.</p>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="e-box-button">
+				<a href="#link">x</a>
+			</div>
+			<div class="clear">
+			</div>
+		</div><!-- ebox END -->
+
+		<div class="text">
+			<h2>Finding our way to success</h2>
+			<p >Copa ipsum dolor sit amet, consectetur adipiscing elit. Proin felis urna, consequat a vestibulum id, consectetur non libero. Nam condimentum pretium diam feugiat luctus. Curabitur est massa, tempus id scelerisque in, auctor eu nisi. Donec nec felis augue. Donec at lacinia tellus. Praesent sit amet fermentum erat. Nam volutpat erat ut porttitor fringilla. Donec quis ex vitae ligula congue ornare vitae vitae nisl. Mauris congue, tortor nec commodo fermentum, lectus mauris semper dui, eget sodales odio sapien eget felis. Quisque suscipit tincidunt condimentum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin felis urna, consequat a vestibulum id, consectetur non libero. Nam condimentum pretium diam feugiat luctus. Curabitur est massa, tempus id scelerisque in, auctor eu nisi. Donec nec felis augue. Donec at lacinia tellus. Praesent sit amet fermentum erat. Nam volutpat erat ut porttitor fringilla. Donec quis ex vitae ligula congue ornare vitae vitae nisl. Mauris congue, tortor nec commodo fermentum, lectus mauris semper dui, eget sodales odio sapien eget felis. Quisque suscipit tincidunt condimentum.</p>
+		</div>
+
+		<div class="photo-square-row">
+
+            <div class="photo-story">
+                <div class="photo-square">
+                    <a href="http://www.centralpark.com/guide/history"><img src="http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/video1_preview.jpg" width="220" height="144" alt="central park photo"></a>
+                </div>
+                <div class="bump-4">
+                	<h4>NYC Central Park Story</h4> 
+                         <p class="author">
+                              from Issac Douglas
+                         </p>
+                    <p class="hours-views">3 hours ago • 2,341 views</p>
+                </div>
+            </div>
+
+
+
+            <div class="photo-story">
+                <div class="photo-square">
+                   <a href="http://www.bestbuy.com"><img src="http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/video2_preview.jpg" width="220" height="144" alt="shopping woman smiling"></a>
+                </div>
+                <div class="bump-4">
+                	<h4>Best Buy Shopping</h4>
+                    <p class="author">
+                    	from Grace Elmers
+                    </p>
+                    <p class="hours-views">
+                    	4 hours ago • 1,321 views
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="photo-story">
+                <div class="photo-square">
+                    <a href="http://www.runnersworld.com"><img src="http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/video3_preview.jpg" width="220" height="144" alt="central park photo"></a>
+                </div>
+                <div class="bump-4">
+                	<h4>Run or die</h4>
+                    <p class="author">
+                    	from Jake Chapman
+                    </p>
+                    <p class="hours-views">
+                    	3 hours ago • 1,121 views
+                    </p>
+                </div>
+            </div>
+
+
+
+         	<div class="photo-story">
+                <div class="photo-square">
+                    <a href="https://www.google.com">
+                    <img src="http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/video4_preview.jpg" width="220" height="144" alt="central park photo"></a>
+                </div>
+                <div class="bump-4">
+                	<h4>Concert</h4>
+                    <p class="author">
+                    	from Robert Neal
+                    </p>
+                    <p class="hours-views">
+                    	6 hours ago • 3,063 views
+                    </p>
+                </div>
+            </div> 
+
+            <div class="clear"></div>
+
+        </div><!-- photo-squares-row End -->
+
+        <div class="v-graph">
+			<img src="http://www.youtzdesign.com/clients-temp/weblab-fullpage/img/graph.png">
+		</div>
+
+  		
+
+
+
+	<!-- </div><!-- Col-Main END -->
+
+
+
+	<div class="footer-top">
+
+		<div class="wrap-n-footer-top">
+
+			<div class="subscribe">
+				<p>Subscribe to our newsletters</p>
+			</div>
+
+			<div class="email-form">
+				<p>Your email here</p> 
+			</div>
+
+			<div class="subscr-btn">
+				<a href="#">Subscribe</a>
+			</div>
+
+			<div class="clear">
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Footer-top END -->
+	<!-- Footer-Bottom Start -->
+	<div class="footer-bot">
+		<div class="footer-bot-inr-wrapr">
+
+			<div class="footer-bot-left-links-box">
+				<ul>
+				  <li><span class="bold">Services</span></li>
+				  <li><a href="#Branding">Branding</a></li>
+				  <li><a href="#UX Design">UX Design</a></li>
+				  <li><a href="#Prototype">Prototype</a></li>
+				  <li><a href="#UI Design">UI Design</a></li>
+				  <li><a href="#Development">Development</a></li>
+				</ul> 
+			</div>
+
+		</div>
+
+		<div class="map-container">
+		<div id="googleMap" style="width:304px;height:193px;"></div><!-- Got code from W3Schools. i spec'd the width and height here and the zoom level in the javascript at the top of the page-->
+		</div>
+
+		<div class="address-box">
+			<div class="bold2 text2">U18 © 2010-2014</div>
+			<div class="text2">303-449-3343</div>
+			<div class="text2">1835 Range Street</div> 
+			<div class="text2">Boulder, CO 80301</div>
+			 <!-- Above: These Divs started without any class element which BEN said was fine. Divs are block level elements so they are a good way to cause line breaks. They als give the functionality of having styles applied to them. p tags are kind of a problem because they have inherent padding. --> 
+			 <div class="email-us-btn">
+				<a href="#Email Us">Email Us</a>	
+			</div>
+		</div>
+		
+		<div class="clear">
+		</div>
+
+	</div><!-- Footer BottomEND -->
+
+
+
+
+</div><!-- Main-Container End -->
+
+
+</body>
+</html>
+
+
