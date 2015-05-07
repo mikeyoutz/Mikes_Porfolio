@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>::IntsaMike::</title>
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+<!-- CSS in the Head Below -->
+		<style type="text/css">
+
+		[if gte IE 9]>
+	    .gradient {
+	       filter: none;
+	    }
+		<![endif]
+
+		* { /* this red asterisk is a way of wholesale specifying attributes for all elements on the page*/
+			margin: 0;
+			padding: 0;
+			border: 0;
+			}
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			list-style-type: none;
+		}
+
+		a:link {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		a:visited {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		a:hover {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		a:active {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+
+		body {
+			font-family: arial;
+			}
+
+		.gradient {
+			height: 211px;
+			width: 99.9%;
+			position: relative;
+			background: rgb(82,128,164); /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUyODBhNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMTYwODgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  rgba(82,128,164,1) 0%, rgba(49,96,136,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(82,128,164,1)), color-stop(100%,rgba(49,96,136,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(82,128,164,1) 0%,rgba(49,96,136,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(82,128,164,1) 0%,rgba(49,96,136,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(82,128,164,1) 0%,rgba(49,96,136,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(82,128,164,1) 0%,rgba(49,96,136,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5280a4', endColorstr='#316088',GradientType=0 ); /* IE6-8 */
+		}
+
+		.main-container {
+			width: 980px;
+			margin: 0 auto;
+			position: relative;
+			height: 750px;
+			margin-top: -200px;
+		}
+
+		.phone-tainer {
+			width: 460px;
+			margin: 0 auto;
+			position: relative;
+			display: inline-block;
+			float: left;
+		}
+		
+		.right-tainer {
+			width: 500px;
+			margin: 0 auto;
+			position: relative;
+			display: inline-block;
+			float: left;
+			margin-top: 50px;
+		}
+
+		.clear {
+		   clear: both;
+		}
+
+		.logo {
+			width: 314px;
+			float: left;
+			margin: 0 auto;
+			display: block;
+			position: relative;
+			height: 120px;
+		}
+
+		.white-box {
+			width:500px;
+			height:335px;
+			margin: 0 auto;
+			border-radius: 5px;
+			background-color: white;
+			display: block;
+			position: relative;
+			float:right;
+			-webkit-box-shadow: 0px 2px 10px 0px rgba(75, 75, 75, 0.3);
+			-moz-box-shadow:    0px 2px 10px 0px rgba(75, 75, 75, 0.3);
+			box-shadow:         0px 2px 10px 0px rgba(75, 75, 75, 0.3);
+			margin-top: -20px;
+		}
+
+		.white-box-two {
+			width:500px;
+			height:60px;
+			margin: 0 auto;
+			border-radius: 5px;
+			background-color: white;
+			display: block;
+			position: relative;
+			float:right;
+			margin-top: -20px;
+			-webkit-box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 1);
+			-moz-box-shadow:    0px 2px 20px 0px rgba(255, 255, 255, 1);
+			box-shadow:         0px 2px 20px 0px rgba(255, 255, 255, 1);
+		}
+
+		.white-box h1 {
+			color: #183051;
+			font: arial;
+			font-size: 1.65em;
+			font-weight: bold;
+			margin: 35px;
+			margin-bottom: 25px;
+		    width: 273px;
+		}
+
+		.white-box p {
+			color: #7f7f7f;
+			font: arial;
+			font-size: 1em;
+			margin-top: 0px;
+		    margin-bottom: 10px;
+		    margin-right: 35px;
+		    margin-left: 35px;
+		}
+
+		.login-btn {
+			/* top: -30px; Something is wrong with this--I shouldn't have to do this MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
+			border-radius: 2px;
+			height: 30px;
+			display: inline-block;
+			width: 100px;
+			text-align: center;
+			color: white;
+			position: relative;
+			float: right;
+		  	text-decoration: none;
+		  	margin-top: 17px;
+			text-decoration: none; /* Has to be in both of containers for there to be no underline*/
+			font-size: .9em;
+			-webkit-box-shadow: 0px 0px 5px 0px rgba(20, 20, 20, .8);
+			-moz-box-shadow:    0px 0px 5px 0px rgba(20, 20, 20, .8);
+			box-shadow:         0px 0px 5px 0px rgba(20, 20, 20, .8);
+			padding-top: 10px;
+		}
+		
+		.login-btn a {
+			margin-left: 4px;
+		}
+
+		/*.login-btn a:link {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		.login-btn a:visited {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		.login-btnn a:hover {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}
+
+		.login-btn a:active {
+			text-decoration: none;
+		    list-style: none;
+		    color: white;
+		}*/
+
+		.app-store {
+			margin: 0 auto;
+			display: inline-block;
+			position: relative;
+			float: left;
+			margin-left: 35px;
+		}
+
+		.google-play {
+			margin: 0 auto;
+			display: inline-block;
+			position: relative;
+			float: left;
+			margin-left: 10px;
+		}
+
+		.bolder-white {
+			font-weight: bolder;
+			color: white;
+		}
+		
+		.bolder {
+			font-weight: bolder;
+		}
+
+		.footer-links {
+			height: 20px;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			font-size: .6em;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #183051;
+			text-align: center; /*This was the only way to to align the text in the center*/
+			margin-top: 20px;
+		}
+
+		.footer-links a {
+			margin-right: 10px;
+			color: #183051;
+		}
+
+		.instagram {
+			color: #b3b3b3;
+			margin-left: 10px;
+		}
+
+	</style>
+
+</head> 
+
+<body>
+
+	<div class="gradient">
+	</div>
+
+	<div class="main-container">
+
+		<div class="phone-tainer">
+			<img src="http://www.youtzdesign.com/clients-temp/instamike/img/home-phones.png" alt="phones" height="618" width="454">
+		</div>
+
+
+		<div class="right-tainer">
+
+			<div class="logo-button">
+
+				<div class="logo">
+					<img src="http://www.youtzdesign.com/clients-temp/instamike/img/brand-header-simple.png" alt="Instagram!" height="78" width="314">
+				</div>
+
+				<div class="login-btn gradient"> 
+						<!--<i class="fa fa-home home-btn"></i>-->
+						<img src="http://www.youtzdesign.com/clients-temp/instamike/img/home-icon.png" alt="Home Icon" height="16" width="19">
+						<a href="#" class="bolder-white">Log in</a>
+				</div>
+
+			</div><!--logo-button Row End-->
+		
+			<div class="white-box">
+				<h1>Capture and Share the World's Moments</h1>
+				<p>Instagram is a <span class="bolder">fast, beautiful</span> and <span class="bolder">fun</span> way to share your life with friends and family.</p><p>
+
+				Take a picture or video, choose a filter to transform its look and feel, then post to Instagram — it's that easy. You can even share to Facebook, Twitter, Tumblr and more. It's a new way to see the world. </p><p>
+
+				Oh yeah, did we mention it’s free? </p>
+				</p>
+			</div>
+
+			<div class="white-box-two">
+				<div class="app-store">
+					<img src="http://www.youtzdesign.com/clients-temp/instamike/img/badge_ios_english-en-47.png" alt="App Store" height="100%" width="100%">
+				</div>
+				<!--Fix. I tried to set the size at 47% but I couldn't get it to also scale the container simultaneously, so I scaled the original instead. But would have liked to be able to scale an linked item-->
+
+				<div class="google-play">
+					<img src="http://www.youtzdesign.com/clients-temp/instamike/img/english_get-47.png" alt="Google Play" height="100%" width="100%"> 
+				</div>
+				<!--Fix. I tried to set the size at 47% but I couldn't get it to also scale the container simultaneously, so I scaled the original instead. But would have liked to be able to scale an linked item-->
+
+				<div class="clear">
+				</div>
+			</div><!--White Boxes End-->
+			
+		</div>
+
+		<div class="clear">
+		</div>
+
+
+		<div class="footer-links">
+			<a href="#About Us">About Us</a>
+			<a href="#Support">Support</a>
+			<a href="#Blog">Blog</a>
+			<a href="#Press">Press</a>
+			<a href="#API">API</a>
+			<a href="#Jobs">Jobs</a>
+			<a href="#Privacy">Privacy</a>
+			<a href="#Terms">Terms</a>
+			<span class="instagram">2015 Instagram</span>
+		</div>
+
+	</div><!-- Main-Container End -->
+
+
+
+
+</body>
+</html>
+
+
+	
